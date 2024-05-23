@@ -98,7 +98,7 @@ def get_historical_data(symbol,token,timeframe,segment):
             "todate": str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
         }
         res= smartApi.getCandleData(historicParam)
-
+        print(res)
         df = pd.DataFrame(res['data'], columns=['date', 'open', 'high', 'low', 'close', 'flag'])
         df['date'] = pd.to_datetime(df['date'])
 
