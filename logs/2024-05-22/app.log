@@ -22,3 +22,1083 @@
 [E 240522 18:03:28 AngelIntegration:37] {'message': 'LoginbyPassword is not allowed. Please switch to Login by MPIN now.', 'errorcode': 'AB7001', 'status': False, 'data': None}
 [E 240522 18:03:34 smartConnect:243] Error occurred while making a POST request to https://apiconnect.angelbroking.com/rest/auth/angelbroking/user/v1/loginByPassword. Error: LoginbyPassword is not allowed. Please switch to Login by MPIN now.. URL: https://apiconnect.angelbroking.com/rest/auth/angelbroking/user/v1/loginByPassword, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'a0:59:50:3b:19:b9', 'Accept': 'application/json', 'X-PrivateKey': 'qCKtcpLM', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'clientcode': 'E12404', 'password': 'sAMSUNGS6', 'totp': '174074'}, Response: {'message': 'LoginbyPassword is not allowed. Please switch to Login by MPIN now.', 'errorcode': 'AB7001', 'status': False, 'data': None}
 [E 240522 18:03:34 AngelIntegration:37] {'message': 'LoginbyPassword is not allowed. Please switch to Login by MPIN now.', 'errorcode': 'AB7001', 'status': False, 'data': None}
+[E 240522 19:50:30 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:50:35 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:50:40 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:50:44 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:50:49 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:50:53 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:50:58 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:03 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:07 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:12 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:16 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:21 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:25 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:30 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:35 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:39 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:44 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:48 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:53 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:51:58 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:02 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:07 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:11 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:16 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:21 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:25 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:30 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:34 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:39 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:44 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:48 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:52:53 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:53:45 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:53:50 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:53:54 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''
+[E 240522 19:53:59 AngelIntegration:85] Historic Api failed: Couldn't parse the JSON response received from the server: b''
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 227, in _request
+        data = json.loads(r.content.decode("utf8"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\pulki\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\AngelIntegration.py", line 77, in get_historical_data
+        res= smartApi.getCandleData(historicParam)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 462, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 260, in _postRequest
+        return self._request(route, "POST", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "D:\Desktop\python projects\GainerLooserScannerAngelOne\.venv\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b''

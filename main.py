@@ -164,19 +164,19 @@ def get_token(symbol):
 
 
 def get_strike(symbol):
-    df = pd.read_csv("Instruments.csv")
+    df = pd.read_csv("Instrument.csv")
     row = df.loc[df['symbol'] == symbol]
     if not row.empty:
         token = row.iloc[0]['strike']
         return token
 def get_expiery(symbol):
-    df = pd.read_csv("Instruments.csv")
+    df = pd.read_csv("Instrument.csv")
     row = df.loc[df['symbol'] == symbol]
     if not row.empty:
         token = row.iloc[0]['expiry']
         return token
 def get_basesymbol(symbol):
-    df = pd.read_csv("Instruments.csv")
+    df = pd.read_csv("Instrument.csv")
     row = df.loc[df['symbol'] == symbol]
     if not row.empty:
         token = row.iloc[0]['name']
@@ -394,10 +394,6 @@ def main_strategy ():
     except Exception as e:
         print("Error happened in Main strategy loop: ", str(e))
         traceback.print_exc()
-
-
-
-# AngelIntegration.get_ltp(segment="NFO",symbol="",token)
 
 
 while True:

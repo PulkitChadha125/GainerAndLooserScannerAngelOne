@@ -64,20 +64,44 @@ def symbolmpping():
     print("instrument file generation")
     tokendf.to_csv("Instrument.csv")
 
+# def get_historical_data(symbol,token,timeframe,segment):
+#     global smartApi
+#     try:
+#         historicParam = {
+#             "exchange": "NFO",
+#             "symboltoken": token,
+#             "interval": "ONE_MINUTE",
+#             "fromdate": "2024-02-08 09:00",
+#             "todate": str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+#         }
+#         res= smartApi.getCandleData(historicParam)
+#         print(res)
+#         df = pd.DataFrame(res['data'], columns=['date', 'open', 'high', 'low', 'close', 'flag'])
+#         df.to_csv(f"{symbol}.csv")
+#
+#         return df.tail(3)
+#
+#     except Exception as e:
+#         logger.exception(f"Historic Api failed: {e}")
+#
 def get_historical_data(symbol,token,timeframe,segment):
     global smartApi
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+    formatted_yesterday = yesterday.strftime('%Y-%m-%d') + ' 09:00'
+
     try:
         historicParam = {
-            "exchange": segment,
+            "exchange": str(segment),
             "symboltoken": token,
             "interval": timeframe,
-            "fromdate": "2024-02-08 09:00",
+            "fromdate": str(formatted_yesterday),
             "todate": str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
         }
         res= smartApi.getCandleData(historicParam)
+
         df = pd.DataFrame(res['data'], columns=['date', 'open', 'high', 'low', 'close', 'flag'])
         df['date'] = pd.to_datetime(df['date'])
-        df.to_csv(f"{symbol}.csv")
+
 
         return df.tail(3)
 
