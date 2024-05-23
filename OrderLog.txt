@@ -33,3 +33,4 @@
 23/05/2024 12:18:29 Target executed call side @ BANKNIFTY29MAY2448100CE , @ 756.55
 23/05/2024 12:18:51 Buy order executed call side @ BANKNIFTY29MAY2448100CE , @ 743.3, sl=723.3,tp=758.3
 23/05/2024 12:19:35 Stoploss executed call side @ BANKNIFTY29MAY2448200CE , @ 653.0
+23/05/2024 12:19:48 Buy order executed call side @ BANKNIFTY29MAY2448100CE , @ 732.95, sl=712.95,tp=747.95
