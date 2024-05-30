@@ -17,7 +17,7 @@ slpe=False
 
 algofoxstrike="29MAY2024"
 
-
+trade=False
 def write_to_order_logs(message):
     with open('OrderLog.txt', 'a') as file:  # Open the file in append mode
         file.write(message + '\n')
@@ -225,7 +225,7 @@ def write_dict_to_csv(data_dict, filename):
         print(f"An error occurred while writing to CSV: {str(e)}")
 
 def main_strategy ():
-    global result_dict_CE,result_dict_PE,BUYCE,BUYPE,username, algofoxpassword, role,strategytag,algofoxstrike
+    global trade,result_dict_CE,result_dict_PE,BUYCE,BUYPE,username, algofoxpassword, role,strategytag,algofoxstrike
     # CE
     try:
         for symbol, params in result_dict_CE.items():
@@ -272,9 +272,10 @@ def main_strategy ():
         symbol_max, details_max = ce_contract_detail
         print(f"Condition check for : {symbol_max},ltp: {AngelIntegration.get_ltp(symbol=symbol_max,token=get_token(symbol_max),segment='NFO')}")
         if (
-            BUYCE==False
+            BUYCE==False and trade==False
            ):
-                BUYCE =True
+                BUYCE = True
+                trade = True
                 usedltp = AngelIntegration.get_ltp(symbol=symbol_max,token=get_token(symbol_max),segment='NFO')
                 details_max['TargetValue'] = usedltp+details_max['Target']
                 details_max['StoplossValue'] = usedltp-details_max['Stoploss']
@@ -292,6 +293,7 @@ def main_strategy ():
             print(f"{timestamp} details_max['TargetValue']: ", details_max['TargetValue'])
             if usedltp >= details_max['TargetValue'] and details_max['TargetValue'] > 0:
                 BUYCE = False
+                trade=False
                 orderlog = f"{timestamp} Target executed call side @ {symbol_max} , @ {usedltp}"
                 sname = f"{get_basesymbol(symbol_max)}|{algofoxstrike}|{str(int(get_strike(symbol_max)))}|CE"
                 Sell_order_algofox(symbol=sname, quantity=int(details_max['lotsize']), instrumentType="OPTIDX",
@@ -302,6 +304,7 @@ def main_strategy ():
 
             if usedltp <= details_max['StoplossValue'] and details_max['StoplossValue'] > 0:
                 BUYCE = False
+                trade = False
                 orderlog = f"{timestamp} Stoploss executed call side @ {symbol_max} , @ {usedltp}"
                 sname = f"{get_basesymbol(symbol_max)}|{algofoxstrike}|{str(int(get_strike(symbol_max)))}|CE"
                 Sell_order_algofox(symbol=sname, quantity=int(details_max['lotsize']), instrumentType="OPTIDX",
@@ -350,10 +353,11 @@ def main_strategy ():
         symbol_min, details_min = pe_contract_detail
         print(f"Condition check for : {symbol_min},ltp: {AngelIntegration.get_ltp(symbol=symbol_min,token=get_token(symbol_min),segment='NFO')}")
         if (
-                BUYPE==False
+                BUYPE==False and trade==False
         ):
             usedltp = AngelIntegration.get_ltp(symbol=symbol_min,token=get_token(symbol_min),segment='NFO')
             BUYPE =True
+            trade=True
             details_min['TargetValue'] = usedltp+details_min['Target']
             details_min['StoplossValue'] = usedltp-details_min['Stoploss']
             sname = f"{get_basesymbol(symbol_max)}|{algofoxstrike}|{str(int(get_strike(symbol_max)))}|PE"
@@ -371,6 +375,7 @@ def main_strategy ():
             print(f"{timestamp} details_min['TargetValue'] : ", details_min['TargetValue'] )
             if usedltp>=details_min['TargetValue'] and details_min['TargetValue']>0:
                 BUYPE=False
+                trade = False
                 sname = f"{get_basesymbol(symbol_max)}|{algofoxstrike}|{str(int(get_strike(symbol_max)))}|PE"
                 Sell_order_algofox(symbol=sname, quantity=int(details_max['lotsize']), instrumentType="OPTIDX",
                                           direction="BUY", price=usedltp, product="MIS",
@@ -382,6 +387,7 @@ def main_strategy ():
 
             if usedltp<=details_min['StoplossValue'] and details_min['StoplossValue']>0:
                 BUYPE = False
+                trade = False
                 sname = f"{get_basesymbol(symbol_max)}|{algofoxstrike}|{str(int(get_strike(symbol_max)))}|PE"
                 Sell_order_algofox(symbol=sname, quantity=int(details_max['lotsize']), instrumentType="OPTIDX",
                                            direction="BUY", price=usedltp, product="MIS",
